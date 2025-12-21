@@ -1,11 +1,9 @@
 import { useState, createContext, type ReactNode } from "react";
-import useLocalStorage from "use-local-storage";
-import type { TMainContext } from "../types";
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const MainContext = createContext<TMainContext | null>(null);
+export const QuizContext = createContext<TQuizContext | null>(null);
 
-export const MainContextProvider = ({ children }: { children: ReactNode }) => {
+export const QuizContextProvider = ({ children }: { children: ReactNode }) => {
   const isDefaultDarkTheme: boolean = window.matchMedia(
     "(prefers-color-scheme: dark)"
   ).matches;
@@ -18,11 +16,11 @@ export const MainContextProvider = ({ children }: { children: ReactNode }) => {
     setTheme(newTheme);
   };
 
-  const mainContextValues: TMainContext = {
+  const quizContextValues: TQuizContext = {
     toggleTheme,
   };
 
   return (
-    <MainContext.Provider value={mainContextValues}>{children}</MainContext.Provider>
+    <QuizContext.Provider value={quizContextValues}>{children}</QuizContext.Provider>
   );
 };

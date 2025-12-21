@@ -1,3 +1,5 @@
+import Setter
+
 export type TUser = {
   _id?: string | mongoose.Types.ObjectId;
   lastLogin: number;
@@ -6,76 +8,11 @@ export type TUser = {
   lastName: string | undefined;
   username: string | undefined;
   password: string | undefined;
-  city: string;
-  stateProvince: string;
   country: string;
-  phoneCountry: string;
-  phoneCountryCode: string;
-  phoneNumberWithoutCountryCode: string;
-  emailAddress: string | undefined;
-  instagram: string;
-  facebook: string;
-  x: string;
   profileImage: string;
-  about: string;
-  friends: string[];
   subscriptionType: "free" | "bronze" | "silver" | "gold" | "platinum";
   hostingCredits: number;
-  interests: string[];
-  whoCanAddUserAsOrganizer:
-    | "friends"
-    | "friends of friends"
-    | "anyone"
-    | "nobody"
-    | undefined;
-  whoCanInviteUser: "friends" | "friends of friends" | "anyone" | "nobody" | undefined;
-  profileVisibleTo: "friends" | "anyone" | "friends of friends" | undefined;
-  friendRequestsReceived: string[];
-  friendRequestsSent: string[];
-  blockedUsers: string[];
-  blockedBy: string[];
-  whoCanMessage: "friends" | "anyone" | "nobody" | "friends of friends" | undefined;
-  whoCanSeeLocation: "friends" | "anyone" | "nobody" | "friends of friends" | undefined;
-  displayFriendCount: boolean;
-  whoCanSeeFriendsList:
-    | "friends"
-    | "anyone"
-    | "nobody"
-    | "friends of friends"
-    | undefined;
-  whoCanSeePhoneNumber:
-    | "friends"
-    | "anyone"
-    | "nobody"
-    | "friends of friends"
-    | undefined;
-  whoCanSeeEmailAddress:
-    | "friends"
-    | "anyone"
-    | "nobody"
-    | "friends of friends"
-    | undefined;
-  whoCanSeeFacebook: "friends" | "anyone" | "nobody" | "friends of friends" | undefined;
-  whoCanSeeX: "friends" | "anyone" | "nobody" | "friends of friends" | undefined;
-  whoCanSeeInstagram: "friends" | "anyone" | "nobody" | "friends of friends" | undefined;
-  whoCanSeeEventsOrganized:
-    | "friends"
-    | "anyone"
-    | "nobody"
-    | "friends of friends"
-    | undefined;
-  whoCanSeeEventsInterestedIn:
-    | "friends"
-    | "anyone"
-    | "nobody"
-    | "friends of friends"
-    | undefined;
-  whoCanSeeEventsInvitedTo:
-    | "friends"
-    | "anyone"
-    | "nobody"
-    | "friends of friends"
-    | undefined;
+  interestedCategories: string[];
 };
 
 export type TUserSecure = {
@@ -84,20 +21,11 @@ export type TUserSecure = {
   firstName: string | undefined;
   lastName: string | undefined;
   username: string | undefined;
-  city?: string;
-  stateProvince?: string;
   country?: string;
-  phoneCountry?: string;
-  phoneCountryCode?: string;
-  phoneNumberWithoutCountryCode?: string;
   emailAddress?: string | undefined;
-  instagram?: string;
-  facebook?: string;
-  x?: string;
   profileImage: string;
   about: string;
-  friends?: string[];
-  interests: string[];
+  interestedCategories: string[];
 };
 
 export type TAnswer = {

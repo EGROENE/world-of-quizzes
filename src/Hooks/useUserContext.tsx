@@ -4,7 +4,7 @@ import { UserContext } from "../Contexts/userContext";
 export const useMainContext = () => {
   const context = useContext(UserContext);
   if (!context) {
-    throw new Error("useMainContext must be used inside the MainContext provider.");
+    throw new Error("useUserContext must be used inside the MainContext provider.");
   }
   return context;
 };
