@@ -52,6 +52,14 @@ export type TQuestion = {
 export type TQuiz = {
   name: string;
   questions: TQuestion[];
+  categories: string[];
+};
+
+export type TQuizContext = {
+  currentQuiz: TQuiz | null;
+  setCurrentQuiz: React.Dispatch<React.SetStateAction<TQuiz | null>>;
+  currentQuestion: TAnswer | null;
+  setCurrentQuestion: React.Dispatch<React.SetStateAction<TAnswer | null>>;
 };
 
 export type TMainContext = {
