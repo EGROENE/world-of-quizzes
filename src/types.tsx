@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 export type TUser = {
   _id?: string | mongoose.Types.ObjectId;
   lastLogin: number;
