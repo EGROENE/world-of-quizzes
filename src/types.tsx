@@ -12,7 +12,9 @@ export type TUser = {
   country: string;
   paidMember: boolean;
   interestedCategories: string[];
-  savedQuizzes: string[];
+  savedQuizzes: TQuiz[];
+  createdQuizzes: TQuiz[];
+  completedQuizzes: TQuiz[];
 };
 
 export type TUserContext = {
